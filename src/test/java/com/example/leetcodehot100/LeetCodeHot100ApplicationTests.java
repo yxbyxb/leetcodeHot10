@@ -1,6 +1,6 @@
 package com.example.leetcodehot100;
 
-import com.example.Pojo.ListNode;
+import com.example.pojo.ListNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -14,19 +14,10 @@ class LeetCodeHot100ApplicationTests {
 
     @Test
     public void doSomeTest() {
-        LetterCombinations_17 letterCombinations17 = new LetterCombinations_17();
-        List<String> strings = letterCombinations17.letterCombinations("23");
-        System.out.println(strings);
+        NextPermutation_31 nextPermutation_31 = new NextPermutation_31();
+        int[] nums = new int[]{3,2,1};
+        nextPermutation_31.nextPermutation(nums);
+        System.out.println("1");
     }
 
-    @Test
-    public void removeNthFromEndTest() {
-        RemoveNthFromEnd_19 removeNthFromEnd_19 = new RemoveNthFromEnd_19();
-        ListNode inputListNode = new ListNode(1,new ListNode(2,new ListNode(3,new ListNode(4,new ListNode(5)))));
-        removeNthFromEnd_19.removeNthFromEnd(inputListNode,2);
-        while (inputListNode!=null){
-            System.out.println(inputListNode.val);
-            inputListNode = inputListNode.next;
-        }
-    }
 }
