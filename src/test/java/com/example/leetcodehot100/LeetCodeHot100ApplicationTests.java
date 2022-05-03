@@ -1,12 +1,7 @@
 package com.example.leetcodehot100;
 
-import com.example.study.fileAndFlow.FileCopier;
+import com.example.leetcodeDaily.ReorderLogFiles_937;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 //@SpringBootTest
 class LeetCodeHot100ApplicationTests {
@@ -17,30 +12,11 @@ class LeetCodeHot100ApplicationTests {
 
     @Test
     public void doSomeTest() {
-        GroupAnagrams_49 groupAnagrams_49 = new GroupAnagrams_49();
-        List<List<String>> lists = groupAnagrams_49.groupAnagrams(new String[]{"abc", "acb", "cd", "dc", "yxb", "bac"});
-        System.out.println(lists);
-    }
-
-    public void quickSort(StringBuilder result,int begin,int end){
-        if (begin>=end){
-            return ;
+        ReorderLogFiles_937 reorderLogFiles_937 = new ReorderLogFiles_937();
+        String[] strings = reorderLogFiles_937.reorderLogFiles(new String[]{"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo"});
+        for (String s : strings){
+            System.out.println(s);
         }
-        char temp = result.charAt(begin);
-        int i=begin+1;
-        int index = i;
-        for (;i<=end;i++){
-            if (result.charAt(i)<temp){
-                char t = result.charAt(i);
-                result.replace(i,i+1,result.charAt(index)+"");
-                result.replace(index,index+1,t+"");
-                index++;
-            }
-        }
-        result.replace(begin,begin+1,result.charAt(index-1)+"");
-        result.replace(index-1,index,temp+"");
-        quickSort(result,begin,index-2);
-        quickSort(result,index,end);
     }
 
 }
