@@ -1,7 +1,11 @@
 package com.example.leetcodehot100;
 
+import com.example.leetcodeDaily.NumSubarrayProductLessThanK_713;
 import com.example.leetcodeDaily.ReorderLogFiles_937;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+import java.util.Random;
 
 //@SpringBootTest
 class LeetCodeHot100ApplicationTests {
@@ -12,11 +16,9 @@ class LeetCodeHot100ApplicationTests {
 
     @Test
     public void doSomeTest() {
-        ReorderLogFiles_937 reorderLogFiles_937 = new ReorderLogFiles_937();
-        String[] strings = reorderLogFiles_937.reorderLogFiles(new String[]{"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo"});
-        for (String s : strings){
-            System.out.println(s);
-        }
+        Subsets_78 subsets_78 = new Subsets_78();
+        List<List<Integer>> subsets = subsets_78.subsets(new int[]{1, 2, 3});
+        System.out.println(subsets);
     }
 
 }
