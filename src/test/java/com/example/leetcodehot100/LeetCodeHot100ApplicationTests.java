@@ -1,7 +1,6 @@
 package com.example.leetcodehot100;
 
-import com.example.leetcodeDaily.NumSubarrayProductLessThanK_713;
-import com.example.leetcodeDaily.ReorderLogFiles_937;
+import com.example.pojo.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -16,9 +15,11 @@ class LeetCodeHot100ApplicationTests {
 
     @Test
     public void doSomeTest() {
-        Subsets_78 subsets_78 = new Subsets_78();
-        List<List<Integer>> subsets = subsets_78.subsets(new int[]{1, 2, 3});
-        System.out.println(subsets);
+        BuildTree_105 buildTree_105 = new BuildTree_105();
+        TreeNode treeNode = buildTree_105.buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7});
+        LevelOrder_102 levelOrder_102 = new LevelOrder_102();
+        List<List<Integer>> lists = levelOrder_102.levelOrder(treeNode);
+        System.out.println(lists);
     }
 
 }
