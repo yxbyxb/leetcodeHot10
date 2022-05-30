@@ -1,5 +1,7 @@
 package com.example.leetcodehot100;
 
+import java.util.Arrays;
+
 //贪心 通过11个样例 错误 应用动态规划 改日再刷
 public class MaxCoins_312 {
     public int maxCoins(int[] nums) {
@@ -76,6 +78,7 @@ public class MaxCoins_312 {
             return;
         }
         int temp = nums[begin];
+        Arrays.sort(nums);
         int index = begin+1;
         for (int i = index;i<=end;i++){
             if (nums[i]<temp){

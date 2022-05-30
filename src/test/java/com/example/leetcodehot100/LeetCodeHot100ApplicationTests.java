@@ -15,13 +15,9 @@ class LeetCodeHot100ApplicationTests {
 
     @Test
     public void doSomeTest() {
-        LRUCache_146 lruCache_146 = new LRUCache_146(2);
-        lruCache_146.put(2,1);
-        lruCache_146.put(1,1);
-        lruCache_146.put(2,3);
-        lruCache_146.put(4,1);
-        System.out.println(lruCache_146.get(1));
-        System.out.println(lruCache_146.get(2));
+        Rob_198 rob_198 = new Rob_198();
+        int rob = rob_198.rob(new int[]{1,2,3,1});
+        System.out.println(rob);
     }
 
 }
