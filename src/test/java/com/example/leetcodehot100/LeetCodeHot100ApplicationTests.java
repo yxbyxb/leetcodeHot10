@@ -15,9 +15,44 @@ class LeetCodeHot100ApplicationTests {
 
     @Test
     public void doSomeTest() {
-        Rob_198 rob_198 = new Rob_198();
-        int rob = rob_198.rob(new int[]{1,2,3,1});
-        System.out.println(rob);
+        MaximalSquare_221 maximalSquare_221 = new MaximalSquare_221();
+        char[][] chars1 = new char[][]{
+                new char[]{'1', '0', '1', '0', '0'},
+                new char[]{'1', '0', '1', '1', '1'},
+                new char[]{'1', '1', '1', '1', '1'},
+                new char[]{'1', '0', '0', '1', '0'},
+        };
+        char[][] chars2 = new char[][]{
+                new char[]{'1', '0'},
+                new char[]{'0', '1'},
+        };
+        char[][] chars3 = new char[][]{
+                new char[]{'1', '1', '1', '1', '0'},
+                new char[]{'1', '1', '1', '1', '0'},
+                new char[]{'1', '1', '1', '1', '1'},
+                new char[]{'1', '1', '1', '1', '1'},
+                new char[]{'0', '0', '1', '1', '1'},
+        };
+        char[][] chars4 = new char[][]{
+                new char[]{'1', '1'},
+                new char[]{'1', '1'},
+        };
+        char[][] chars5 = new char[][]{
+                new char[]{'0', '0', '0', '1'},
+                new char[]{'1', '1', '0', '1'},
+                new char[]{'1', '1', '1', '1'},
+                new char[]{'0', '1', '1', '1'},
+                new char[]{'0', '1', '1', '1'},
+        };
+        char[][] chars6 = new char[][]{
+                new char[]{'1', '1', '1', '1','1', '1', '1', '1'},
+                new char[]{'1', '1', '1', '1','1', '1', '1', '0'},
+                new char[]{'1', '1', '1', '1','1', '1', '1', '0'},
+                new char[]{'1', '1', '1', '1','1', '0', '0', '0'},
+                new char[]{'0', '1', '1', '1','1', '0', '0', '0'},
+        };
+        int i = maximalSquare_221.maximalSquare(chars6);
+        System.out.println(i);
     }
 
 }
