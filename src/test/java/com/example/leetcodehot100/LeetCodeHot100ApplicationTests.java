@@ -1,11 +1,9 @@
 package com.example.leetcodehot100;
 
-import com.example.pojo.ListNode;
-import com.example.pojo.TreeNode;
+import com.example.leetcodeDaily.AnswerQueries_2389;
+import com.example.leetcodeDaily.CountSubarrays_2488;
+import com.example.util.StringUtils;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
-import java.util.Random;
 
 //@SpringBootTest
 class LeetCodeHot100ApplicationTests {
@@ -15,12 +13,29 @@ class LeetCodeHot100ApplicationTests {
 
     @Test
     public void doSomeTest() {
-        DailyTemperatures_739 dailyTemperatures_739 = new DailyTemperatures_739();
-        int[] ints = dailyTemperatures_739.dailyTemperatures(new int[]{73, 74, 75, 71, 69, 72, 76, 73});
-        System.out.println(ints);
+        String s = StringUtils.replaceMidBracketWithBigBracket("[[0,1],[0,3],[1,2],[1,3]]");
+        System.out.println(s);
+    }
+
+    @Test
+    public void CountSubarrays_2488Test() {
+        CountSubarrays_2488 countSubarrays2488 = new CountSubarrays_2488();
+        int[] nums = {5, 19, 11, 15, 13, 16, 4, 6, 2, 7, 10, 8, 18, 20, 1, 3, 17, 9, 12, 14};
+        int i = countSubarrays2488.countSubarrays(nums, 6);
+        System.out.println(i);
 
     }
 
+    @Test
+    public void AnswerQueries_2389Test() {
+        int[] nums = {4,5,2,1};
+        int[] queries  = {3,10,21};
+        AnswerQueries_2389 answerQueries2389 = new AnswerQueries_2389();
+        int[] ints = answerQueries2389.answerQueries(nums, queries);
+        System.out.println(ints);
+    }
+
+    @Test
     public void maximalSquare_221_Test() {
         MaximalSquare_221 maximalSquare_221 = new MaximalSquare_221();
         char[][] chars1 = new char[][]{
