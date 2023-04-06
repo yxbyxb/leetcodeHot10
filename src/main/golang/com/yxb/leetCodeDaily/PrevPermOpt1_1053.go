@@ -1,4 +1,4 @@
-package leetCodeDaidy
+package leetCodeDaily
 
 func prevPermOpt1(arr []int) []int {
 	beginIndex := -1
