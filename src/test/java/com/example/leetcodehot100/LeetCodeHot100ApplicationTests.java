@@ -1,9 +1,6 @@
 package com.example.leetcodehot100;
 
-import com.example.leetcodeDaily.AnswerQueries_2389;
-import com.example.leetcodeDaily.CountSubstrings_1638;
-import com.example.leetcodeDaily.MergeStones_1000;
-import com.example.leetcodeDaily.MinExtraChar_2707;
+import com.example.leetcodeDaily.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -171,6 +168,14 @@ class LeetCodeHot100ApplicationTests {
         String s = "leetscode";
         String[] dictionary = {"leet", "code", "leetcode"};
         int i = minExtraChar2707.minExtraChar(s, dictionary);
+        System.out.println(i);
+    }
+
+    @Test
+    public void minLength_2696Test() {
+        MinLength_2696 minLength2696 = new MinLength_2696();
+        String s = "ACBBD";
+        int i = minLength2696.minLengthAnother(s);
         System.out.println(i);
     }
 }
