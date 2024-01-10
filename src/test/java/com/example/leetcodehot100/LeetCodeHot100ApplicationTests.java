@@ -3,6 +3,7 @@ package com.example.leetcodehot100;
 import com.example.leetcodeDaily.AnswerQueries_2389;
 import com.example.leetcodeDaily.CountSubstrings_1638;
 import com.example.leetcodeDaily.MergeStones_1000;
+import com.example.leetcodeDaily.MinExtraChar_2707;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -49,17 +50,17 @@ class LeetCodeHot100ApplicationTests {
                 indegrees.remove(pop);
                 List<Integer> needMinus = graph.get(pop);
 //            把入度为0的所有节点的相关节点入度-1
-                for (Integer tempNode: needMinus) {
+                for (Integer tempNode : needMinus) {
                     Integer tempNodeNum = indegrees.get(tempNode);
 //                    如果当前节点入度为1，也就是-1后为0，放入新队列中
                     if (tempNodeNum == 1) {
                         newDequeue.add(tempNode);
                     }
-                    indegrees.put(tempNode,tempNodeNum - 1);
+                    indegrees.put(tempNode, tempNodeNum - 1);
                 }
 //                把队列换成新队列
                 queue = newDequeue;
-                count ++ ;
+                count++;
             }
         }
         System.out.println(count);
@@ -73,7 +74,7 @@ class LeetCodeHot100ApplicationTests {
             m++;
         }
         long end = System.nanoTime();
-        System.out.println((end-begin)/1000000 + "ms");
+        System.out.println((end - begin) / 1000000 + "ms");
     }
 
     private void update(int[] a) {
@@ -164,4 +165,12 @@ class LeetCodeHot100ApplicationTests {
         System.out.println(i);
     }
 
+    @Test
+    public void minExtraChar_2707Test() {
+        MinExtraChar_2707 minExtraChar2707 = new MinExtraChar_2707();
+        String s = "leetscode";
+        String[] dictionary = {"leet", "code", "leetcode"};
+        int i = minExtraChar2707.minExtraChar(s, dictionary);
+        System.out.println(i);
+    }
 }
